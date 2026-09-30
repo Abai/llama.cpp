@@ -1,0 +1,91 @@
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.8.1
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+[/home/abai/Projects/abai/online/workspace/llama.cpp/build-sassgate-a] compiling 5 instance object(s) with -j24 ...
+[/home/abai/Projects/abai/online/workspace/llama.cpp/build-sassgate-a] build took 10 s
+[/home/abai/Projects/abai/online/workspace/llama.cpp/build-sassgate-b] compiling 5 instance object(s) with -j24 ...
+[/home/abai/Projects/abai/online/workspace/llama.cpp/build-sassgate-b] build took 8 s
+comparing 5 instance object(s): /home/abai/Projects/abai/online/workspace/llama.cpp/build-sassgate-a vs /home/abai/Projects/abai/online/workspace/llama.cpp/build-sassgate-b
+  res kernel 0  void flash_attn_combine_results<(int)128>(const float *, con REG:64 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:380 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 1  void flash_attn_stream_k_fixup_general<(int)128, (int)1, (in REG:28 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:432 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 2  void flash_attn_stream_k_fixup_uniform<(int)128, (int)1, (in REG:39 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:428 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 3  void flash_attn_ext_f16<(int)192, (int)128, (int)1, (int)16, REG:24 STACK:40 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 4  void flash_attn_ext_f16<(int)192, (int)128, (int)1, (int)16, REG:209 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 5  void flash_attn_combine_results<(int)512>(const float *, con REG:64 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:380 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 6  void flash_attn_stream_k_fixup_general<(int)512, (int)1, (in REG:28 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:432 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 7  void flash_attn_stream_k_fixup_uniform<(int)512, (int)1, (in REG:39 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:428 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 8  void flash_attn_mask_to_KV_max<(int)1>(const __half2 *, int  REG:16 STACK:0 SHARED:128 LOCAL:0 CONSTANT[0]:392 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 9  void flash_attn_ext_f16<(int)576, (int)512, (int)1, (int)16, REG:24 STACK:40 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 10 void flash_attn_ext_f16<(int)576, (int)512, (int)1, (int)16, REG:254 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:16 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  note kernel 3  stub (NO_DEVICE_CODE): identical after masking source-location immediates
+  note kernel 9  stub (NO_DEVICE_CODE): identical after masking source-location immediates
+PASS fattn-mma-f16-instance-ncols1_1-ncols2_16
+  res kernel 0  void flash_attn_combine_results<(int)512>(const float *, con REG:64 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:380 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 1  void flash_attn_stream_k_fixup_general<(int)512, (int)1, (in REG:28 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:432 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 2  void flash_attn_stream_k_fixup_uniform<(int)512, (int)1, (in REG:39 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:428 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 3  void flash_attn_ext_f16<(int)576, (int)512, (int)1, (int)32, REG:24 STACK:40 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 4  void flash_attn_ext_f16<(int)576, (int)512, (int)1, (int)32, REG:255 STACK:48 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 5  void flash_attn_combine_results<(int)256>(const float *, con REG:64 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:380 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 6  void flash_attn_stream_k_fixup_general<(int)256, (int)1, (in REG:28 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:432 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 7  void flash_attn_stream_k_fixup_uniform<(int)256, (int)1, (in REG:39 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:428 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 8  void flash_attn_mask_to_KV_max<(int)1>(const __half2 *, int  REG:16 STACK:0 SHARED:128 LOCAL:0 CONSTANT[0]:392 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 9  void flash_attn_ext_f16<(int)320, (int)256, (int)1, (int)32, REG:24 STACK:40 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 10 void flash_attn_ext_f16<(int)320, (int)256, (int)1, (int)32, REG:222 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  note kernel 3  stub (NO_DEVICE_CODE): identical after masking source-location immediates
+  note kernel 9  stub (NO_DEVICE_CODE): identical after masking source-location immediates
+PASS fattn-mma-f16-instance-ncols1_1-ncols2_32
+  res kernel 0  void flash_attn_combine_results<(int)128>(const float *, con REG:64 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:380 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 1  void flash_attn_stream_k_fixup_general<(int)128, (int)2, (in REG:30 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:432 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 2  void flash_attn_stream_k_fixup_uniform<(int)128, (int)2, (in REG:39 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:428 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 3  void flash_attn_ext_f16<(int)192, (int)128, (int)2, (int)16, REG:24 STACK:40 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 4  void flash_attn_ext_f16<(int)192, (int)128, (int)2, (int)16, REG:182 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 5  void flash_attn_combine_results<(int)512>(const float *, con REG:64 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:380 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 6  void flash_attn_stream_k_fixup_general<(int)512, (int)2, (in REG:30 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:432 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 7  void flash_attn_stream_k_fixup_uniform<(int)512, (int)2, (in REG:39 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:428 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 8  void flash_attn_mask_to_KV_max<(int)2>(const __half2 *, int  REG:20 STACK:0 SHARED:128 LOCAL:0 CONSTANT[0]:392 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 9  void flash_attn_ext_f16<(int)576, (int)512, (int)2, (int)16, REG:24 STACK:40 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 10 void flash_attn_ext_f16<(int)576, (int)512, (int)2, (int)16, REG:255 STACK:48 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  note kernel 3  stub (NO_DEVICE_CODE): identical after masking source-location immediates
+  note kernel 9  stub (NO_DEVICE_CODE): identical after masking source-location immediates
+PASS fattn-mma-f16-instance-ncols1_2-ncols2_16
+  res kernel 0  void flash_attn_combine_results<(int)512>(const float *, con REG:64 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:380 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 1  void flash_attn_stream_k_fixup_general<(int)512, (int)2, (in REG:30 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:432 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 2  void flash_attn_stream_k_fixup_uniform<(int)512, (int)2, (in REG:39 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:428 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 3  void flash_attn_ext_f16<(int)576, (int)512, (int)2, (int)32, REG:24 STACK:40 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 4  void flash_attn_ext_f16<(int)576, (int)512, (int)2, (int)32, REG:255 STACK:40 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 5  void flash_attn_combine_results<(int)256>(const float *, con REG:64 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:380 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 6  void flash_attn_stream_k_fixup_general<(int)256, (int)2, (in REG:30 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:432 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 7  void flash_attn_stream_k_fixup_uniform<(int)256, (int)2, (in REG:39 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:428 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 8  void flash_attn_mask_to_KV_max<(int)2>(const __half2 *, int  REG:20 STACK:0 SHARED:128 LOCAL:0 CONSTANT[0]:392 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 9  void flash_attn_ext_f16<(int)320, (int)256, (int)2, (int)32, REG:24 STACK:40 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 10 void flash_attn_ext_f16<(int)320, (int)256, (int)2, (int)32, REG:206 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  note kernel 3  stub (NO_DEVICE_CODE): identical after masking source-location immediates
+  note kernel 9  stub (NO_DEVICE_CODE): identical after masking source-location immediates
+PASS fattn-mma-f16-instance-ncols1_2-ncols2_32
+  res kernel 0  void flash_attn_combine_results<(int)128>(const float *, con REG:64 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:380 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 1  void flash_attn_stream_k_fixup_general<(int)128, (int)4, (in REG:30 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:432 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 2  void flash_attn_stream_k_fixup_uniform<(int)128, (int)4, (in REG:39 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:428 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 3  void flash_attn_ext_f16<(int)192, (int)128, (int)4, (int)16, REG:24 STACK:40 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 4  void flash_attn_ext_f16<(int)192, (int)128, (int)4, (int)16, REG:213 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 5  void flash_attn_combine_results<(int)512>(const float *, con REG:64 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:380 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 6  void flash_attn_stream_k_fixup_general<(int)512, (int)4, (in REG:30 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:432 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 7  void flash_attn_stream_k_fixup_uniform<(int)512, (int)4, (in REG:39 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:428 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 8  void flash_attn_mask_to_KV_max<(int)4>(const __half2 *, int  REG:24 STACK:0 SHARED:128 LOCAL:0 CONSTANT[0]:392 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 9  void flash_attn_ext_f16<(int)576, (int)512, (int)4, (int)16, REG:24 STACK:40 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 10 void flash_attn_ext_f16<(int)576, (int)512, (int)4, (int)16, REG:255 STACK:40 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  note kernel 3  stub (NO_DEVICE_CODE): identical after masking source-location immediates
+  note kernel 9  stub (NO_DEVICE_CODE): identical after masking source-location immediates
+PASS fattn-mma-f16-instance-ncols1_4-ncols2_16
+RESULT: all instance objects instruction-identical

@@ -1,0 +1,24 @@
+branch 41c903be9 (fused, swizzled dequant tiles) vs master 36b101543
+RTX 3090, Qwen3.6-27B-UD-Q4_K_XL, -fa 1 -ngl 99, llama-bench -r 3, same session
+fused-linear = pre-swizzle-adoption build (rebase resolution only), for reference; f16/tg rows measured with the branch build (f16 kernels are identical in both branch builds)
+
+        kv   ub           test    master     fused  ratio  fused-linear
+      q4_0    2   pp512@d20480     68.22     76.84  1.126         1.125
+      q4_0    4   pp512@d20480    102.08    111.27  1.090         1.088
+      q4_0    8   pp512@d20480    132.84    139.78  1.052         1.050
+      q4_0   64   pp512@d20480    873.77    903.41  1.034         1.030
+      q4_0  512   pp512@d20480   1171.75   1182.10  1.009         1.005
+      q8_0    2   pp512@d20480     68.47     75.90  1.109         1.107
+      q8_0    4   pp512@d20480    102.79    110.76  1.078         1.074
+      q8_0    8   pp512@d20480    133.13    139.57  1.048         1.043
+      q8_0   64   pp512@d20480    873.33    898.63  1.029         1.025
+      q8_0  512   pp512@d20480   1174.89   1163.44  0.990         0.987
+ q8_0/q4_0    2   pp512@d20480     68.42     76.34  1.116             —
+ q8_0/q4_0    4   pp512@d20480    102.53    110.90  1.082             —
+ q8_0/q4_0    8   pp512@d20480    132.99    139.43  1.048             —
+ q8_0/q4_0   64   pp512@d20480    873.77    899.12  1.029             —
+ q8_0/q4_0  512   pp512@d20480   1174.09   1172.98  0.999             —
+       f16    4   pp512@d20480    110.18    110.08  0.999             —
+       f16  512   pp512@d20480   1182.67   1184.17  1.001             —
+       f16  512    tg64@d16384     39.62     39.58  0.999             —
+      q8_0  512    tg64@d16384     37.89     37.85  0.999             —

@@ -1,0 +1,98 @@
+CREATE TABLE IF NOT EXISTS llama_bench (
+  build_commit TEXT,
+  build_number INTEGER,
+  cpu_info TEXT,
+  gpu_info TEXT,
+  backends TEXT,
+  model_filename TEXT,
+  model_type TEXT,
+  model_size INTEGER,
+  model_n_params INTEGER,
+  n_batch INTEGER,
+  n_ubatch INTEGER,
+  n_threads INTEGER,
+  cpu_mask TEXT,
+  cpu_strict INTEGER,
+  poll INTEGER,
+  type_k TEXT,
+  type_v TEXT,
+  n_gpu_layers INTEGER,
+  n_cpu_moe INTEGER,
+  split_mode TEXT,
+  main_gpu INTEGER,
+  no_kv_offload INTEGER,
+  flash_attn INTEGER,
+  devices TEXT,
+  tensor_split TEXT,
+  tensor_buft_overrides TEXT,
+  load_mode TEXT,
+  lazy_mode TEXT,
+  embeddings INTEGER,
+  no_op_offload INTEGER,
+  no_host INTEGER,
+  fit_target INTEGER,
+  fit_min_ctx INTEGER,
+  n_prompt INTEGER,
+  n_gen INTEGER,
+  n_depth INTEGER,
+  test_time TEXT,
+  avg_ns INTEGER,
+  stddev_ns INTEGER,
+  avg_ts REAL,
+  stddev_ts REAL
+);
+
+INSERT INTO llama_bench (build_commit, build_number, cpu_info, gpu_info, backends, model_filename, model_type, model_size, model_n_params, n_batch, n_ubatch, n_threads, cpu_mask, cpu_strict, poll, type_k, type_v, n_gpu_layers, n_cpu_moe, split_mode, main_gpu, no_kv_offload, flash_attn, devices, tensor_split, tensor_buft_overrides, load_mode, lazy_mode, embeddings, no_op_offload, no_host, fit_target, fit_min_ctx, n_prompt, n_gen, n_depth, test_time, avg_ns, stddev_ns, avg_ts, stddev_ts) VALUES ('unknown', '0', '12th Gen Intel(R) Core(TM) i9-12900K', 'NVIDIA GeForce RTX 3090', 'CUDA', '/models/unsloth/Qwen3.6-27B-MTP-GGUF/Qwen3.6-27B-UD-Q4_K_XL.gguf', 'qwen35 27B Q4_K - Medium', '17898102784', '27320697856', '2048', '2', '8', '0x0', '0', '50', 'q8_0', 'q4_0', '99', '0', 'layer', '0', '0', '1', 'auto', '0.00', 'none', 'auto', 'auto', '0', '0', '0', '0', '0', '512', '0', '20480', '2026-09-01T19:54:42Z', '7483723110', '1090611', '68.415146', '0.009908');
+INSERT INTO llama_bench (build_commit, build_number, cpu_info, gpu_info, backends, model_filename, model_type, model_size, model_n_params, n_batch, n_ubatch, n_threads, cpu_mask, cpu_strict, poll, type_k, type_v, n_gpu_layers, n_cpu_moe, split_mode, main_gpu, no_kv_offload, flash_attn, devices, tensor_split, tensor_buft_overrides, load_mode, lazy_mode, embeddings, no_op_offload, no_host, fit_target, fit_min_ctx, n_prompt, n_gen, n_depth, test_time, avg_ns, stddev_ns, avg_ts, stddev_ts) VALUES ('unknown', '0', '12th Gen Intel(R) Core(TM) i9-12900K', 'NVIDIA GeForce RTX 3090', 'CUDA', '/models/unsloth/Qwen3.6-27B-MTP-GGUF/Qwen3.6-27B-UD-Q4_K_XL.gguf', 'qwen35 27B Q4_K - Medium', '17898102784', '27320697856', '2048', '4', '8', '0x0', '0', '50', 'q8_0', 'q4_0', '99', '0', 'layer', '0', '0', '1', 'auto', '0.00', 'none', 'auto', 'auto', '0', '0', '0', '0', '0', '512', '0', '20480', '2026-09-01T19:59:50Z', '4993770735', '485589', '102.527735', '0.009863');
+INSERT INTO llama_bench (build_commit, build_number, cpu_info, gpu_info, backends, model_filename, model_type, model_size, model_n_params, n_batch, n_ubatch, n_threads, cpu_mask, cpu_strict, poll, type_k, type_v, n_gpu_layers, n_cpu_moe, split_mode, main_gpu, no_kv_offload, flash_attn, devices, tensor_split, tensor_buft_overrides, load_mode, lazy_mode, embeddings, no_op_offload, no_host, fit_target, fit_min_ctx, n_prompt, n_gen, n_depth, test_time, avg_ns, stddev_ns, avg_ts, stddev_ts) VALUES ('unknown', '0', '12th Gen Intel(R) Core(TM) i9-12900K', 'NVIDIA GeForce RTX 3090', 'CUDA', '/models/unsloth/Qwen3.6-27B-MTP-GGUF/Qwen3.6-27B-UD-Q4_K_XL.gguf', 'qwen35 27B Q4_K - Medium', '17898102784', '27320697856', '2048', '8', '8', '0x0', '0', '50', 'q8_0', 'q4_0', '99', '0', 'layer', '0', '0', '1', 'auto', '0.00', 'none', 'auto', 'auto', '0', '0', '0', '0', '0', '512', '0', '20480', '2026-09-01T20:00:10Z', '3849994588', '452991', '132.987201', '0.015351');
+INSERT INTO llama_bench (build_commit, build_number, cpu_info, gpu_info, backends, model_filename, model_type, model_size, model_n_params, n_batch, n_ubatch, n_threads, cpu_mask, cpu_strict, poll, type_k, type_v, n_gpu_layers, n_cpu_moe, split_mode, main_gpu, no_kv_offload, flash_attn, devices, tensor_split, tensor_buft_overrides, load_mode, lazy_mode, embeddings, no_op_offload, no_host, fit_target, fit_min_ctx, n_prompt, n_gen, n_depth, test_time, avg_ns, stddev_ns, avg_ts, stddev_ts) VALUES ('unknown', '0', '12th Gen Intel(R) Core(TM) i9-12900K', 'NVIDIA GeForce RTX 3090', 'CUDA', '/models/unsloth/Qwen3.6-27B-MTP-GGUF/Qwen3.6-27B-UD-Q4_K_XL.gguf', 'qwen35 27B Q4_K - Medium', '17898102784', '27320697856', '2048', '64', '8', '0x0', '0', '50', 'q8_0', 'q4_0', '99', '0', 'layer', '0', '0', '1', 'auto', '0.00', 'none', 'auto', 'auto', '0', '0', '0', '0', '0', '512', '0', '20480', '2026-09-01T20:00:26Z', '585966641', '699733', '873.770708', '1.044086');
+INSERT INTO llama_bench (build_commit, build_number, cpu_info, gpu_info, backends, model_filename, model_type, model_size, model_n_params, n_batch, n_ubatch, n_threads, cpu_mask, cpu_strict, poll, type_k, type_v, n_gpu_layers, n_cpu_moe, split_mode, main_gpu, no_kv_offload, flash_attn, devices, tensor_split, tensor_buft_overrides, load_mode, lazy_mode, embeddings, no_op_offload, no_host, fit_target, fit_min_ctx, n_prompt, n_gen, n_depth, test_time, avg_ns, stddev_ns, avg_ts, stddev_ts) VALUES ('unknown', '0', '12th Gen Intel(R) Core(TM) i9-12900K', 'NVIDIA GeForce RTX 3090', 'CUDA', '/models/unsloth/Qwen3.6-27B-MTP-GGUF/Qwen3.6-27B-UD-Q4_K_XL.gguf', 'qwen35 27B Q4_K - Medium', '17898102784', '27320697856', '2048', '512', '8', '0x0', '0', '50', 'q8_0', 'q4_0', '99', '0', 'layer', '0', '0', '1', 'auto', '0.00', 'none', 'auto', 'auto', '0', '0', '0', '0', '0', '512', '0', '20480', '2026-09-01T20:00:29Z', '436100190', '3233274', '1174.085172', '8.707128');
+CREATE TABLE IF NOT EXISTS llama_bench (
+  build_commit TEXT,
+  build_number INTEGER,
+  cpu_info TEXT,
+  gpu_info TEXT,
+  backends TEXT,
+  model_filename TEXT,
+  model_type TEXT,
+  model_size INTEGER,
+  model_n_params INTEGER,
+  n_batch INTEGER,
+  n_ubatch INTEGER,
+  n_threads INTEGER,
+  cpu_mask TEXT,
+  cpu_strict INTEGER,
+  poll INTEGER,
+  type_k TEXT,
+  type_v TEXT,
+  n_gpu_layers INTEGER,
+  n_cpu_moe INTEGER,
+  split_mode TEXT,
+  main_gpu INTEGER,
+  no_kv_offload INTEGER,
+  flash_attn INTEGER,
+  devices TEXT,
+  tensor_split TEXT,
+  tensor_buft_overrides TEXT,
+  load_mode TEXT,
+  lazy_mode TEXT,
+  embeddings INTEGER,
+  no_op_offload INTEGER,
+  no_host INTEGER,
+  fit_target INTEGER,
+  fit_min_ctx INTEGER,
+  n_prompt INTEGER,
+  n_gen INTEGER,
+  n_depth INTEGER,
+  test_time TEXT,
+  avg_ns INTEGER,
+  stddev_ns INTEGER,
+  avg_ts REAL,
+  stddev_ts REAL
+);
+
+INSERT INTO llama_bench (build_commit, build_number, cpu_info, gpu_info, backends, model_filename, model_type, model_size, model_n_params, n_batch, n_ubatch, n_threads, cpu_mask, cpu_strict, poll, type_k, type_v, n_gpu_layers, n_cpu_moe, split_mode, main_gpu, no_kv_offload, flash_attn, devices, tensor_split, tensor_buft_overrides, load_mode, lazy_mode, embeddings, no_op_offload, no_host, fit_target, fit_min_ctx, n_prompt, n_gen, n_depth, test_time, avg_ns, stddev_ns, avg_ts, stddev_ts) VALUES ('unknown', '0', '12th Gen Intel(R) Core(TM) i9-12900K', 'NVIDIA GeForce RTX 3090', 'CUDA', '/models/unsloth/Qwen3.6-27B-MTP-GGUF/Qwen3.6-27B-UD-Q4_K_XL.gguf', 'qwen35 27B Q4_K - Medium', '17898102784', '27320697856', '2048', '2', '8', '0x0', '0', '50', 'q8_0', 'q4_0', '99', '0', 'layer', '0', '0', '1', 'auto', '0.00', 'none', 'auto', 'auto', '0', '0', '0', '0', '0', '512', '0', '20480', '2026-09-01T20:00:39Z', '6706961026', '1139971', '76.338599', '0.012974');
+INSERT INTO llama_bench (build_commit, build_number, cpu_info, gpu_info, backends, model_filename, model_type, model_size, model_n_params, n_batch, n_ubatch, n_threads, cpu_mask, cpu_strict, poll, type_k, type_v, n_gpu_layers, n_cpu_moe, split_mode, main_gpu, no_kv_offload, flash_attn, devices, tensor_split, tensor_buft_overrides, load_mode, lazy_mode, embeddings, no_op_offload, no_host, fit_target, fit_min_ctx, n_prompt, n_gen, n_depth, test_time, avg_ns, stddev_ns, avg_ts, stddev_ts) VALUES ('unknown', '0', '12th Gen Intel(R) Core(TM) i9-12900K', 'NVIDIA GeForce RTX 3090', 'CUDA', '/models/unsloth/Qwen3.6-27B-MTP-GGUF/Qwen3.6-27B-UD-Q4_K_XL.gguf', 'qwen35 27B Q4_K - Medium', '17898102784', '27320697856', '2048', '4', '8', '0x0', '0', '50', 'q8_0', 'q4_0', '99', '0', 'layer', '0', '0', '1', 'auto', '0.00', 'none', 'auto', 'auto', '0', '0', '0', '0', '0', '512', '0', '20480', '2026-09-01T20:05:31Z', '4616786259', '639928', '110.899656', '0.015284');
+INSERT INTO llama_bench (build_commit, build_number, cpu_info, gpu_info, backends, model_filename, model_type, model_size, model_n_params, n_batch, n_ubatch, n_threads, cpu_mask, cpu_strict, poll, type_k, type_v, n_gpu_layers, n_cpu_moe, split_mode, main_gpu, no_kv_offload, flash_attn, devices, tensor_split, tensor_buft_overrides, load_mode, lazy_mode, embeddings, no_op_offload, no_host, fit_target, fit_min_ctx, n_prompt, n_gen, n_depth, test_time, avg_ns, stddev_ns, avg_ts, stddev_ts) VALUES ('unknown', '0', '12th Gen Intel(R) Core(TM) i9-12900K', 'NVIDIA GeForce RTX 3090', 'CUDA', '/models/unsloth/Qwen3.6-27B-MTP-GGUF/Qwen3.6-27B-UD-Q4_K_XL.gguf', 'qwen35 27B Q4_K - Medium', '17898102784', '27320697856', '2048', '8', '8', '0x0', '0', '50', 'q8_0', 'q4_0', '99', '0', 'layer', '0', '0', '1', 'auto', '0.00', 'none', 'auto', 'auto', '0', '0', '0', '0', '0', '512', '0', '20480', '2026-09-01T20:05:50Z', '3672177517', '323431', '139.426811', '0.011842');
+INSERT INTO llama_bench (build_commit, build_number, cpu_info, gpu_info, backends, model_filename, model_type, model_size, model_n_params, n_batch, n_ubatch, n_threads, cpu_mask, cpu_strict, poll, type_k, type_v, n_gpu_layers, n_cpu_moe, split_mode, main_gpu, no_kv_offload, flash_attn, devices, tensor_split, tensor_buft_overrides, load_mode, lazy_mode, embeddings, no_op_offload, no_host, fit_target, fit_min_ctx, n_prompt, n_gen, n_depth, test_time, avg_ns, stddev_ns, avg_ts, stddev_ts) VALUES ('unknown', '0', '12th Gen Intel(R) Core(TM) i9-12900K', 'NVIDIA GeForce RTX 3090', 'CUDA', '/models/unsloth/Qwen3.6-27B-MTP-GGUF/Qwen3.6-27B-UD-Q4_K_XL.gguf', 'qwen35 27B Q4_K - Medium', '17898102784', '27320697856', '2048', '64', '8', '0x0', '0', '50', 'q8_0', 'q4_0', '99', '0', 'layer', '0', '0', '1', 'auto', '0.00', 'none', 'auto', 'auto', '0', '0', '0', '0', '0', '512', '0', '20480', '2026-09-01T20:06:05Z', '569445215', '142246', '899.120770', '0.221441');
+INSERT INTO llama_bench (build_commit, build_number, cpu_info, gpu_info, backends, model_filename, model_type, model_size, model_n_params, n_batch, n_ubatch, n_threads, cpu_mask, cpu_strict, poll, type_k, type_v, n_gpu_layers, n_cpu_moe, split_mode, main_gpu, no_kv_offload, flash_attn, devices, tensor_split, tensor_buft_overrides, load_mode, lazy_mode, embeddings, no_op_offload, no_host, fit_target, fit_min_ctx, n_prompt, n_gen, n_depth, test_time, avg_ns, stddev_ns, avg_ts, stddev_ts) VALUES ('unknown', '0', '12th Gen Intel(R) Core(TM) i9-12900K', 'NVIDIA GeForce RTX 3090', 'CUDA', '/models/unsloth/Qwen3.6-27B-MTP-GGUF/Qwen3.6-27B-UD-Q4_K_XL.gguf', 'qwen35 27B Q4_K - Medium', '17898102784', '27320697856', '2048', '512', '8', '0x0', '0', '50', 'q8_0', 'q4_0', '99', '0', 'layer', '0', '0', '1', 'auto', '0.00', 'none', 'auto', 'auto', '0', '0', '0', '0', '0', '512', '0', '20480', '2026-09-01T20:06:08Z', '436516300', '3777448', '1172.981555', '10.153478');

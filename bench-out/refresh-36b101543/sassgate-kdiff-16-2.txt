@@ -1,0 +1,394 @@
+  res kernel 0  void flash_attn_combine_results<(int)512>(const float *, con REG:64 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:380 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 1  void flash_attn_stream_k_fixup_general<(int)512, (int)16, (i REG:30 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:432 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 2  void flash_attn_stream_k_fixup_uniform<(int)512, (int)16, (i REG:39 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:428 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 3  void flash_attn_ext_f16<(int)512, (int)512, (int)16, (int)2, REG:255 STACK:72 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 4  void flash_attn_ext_f16<(int)512, (int)512, (int)16, (int)2, REG:255 STACK:80 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 5  void flash_attn_combine_results<(int)256>(const float *, con REG:64 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:380 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 6  void flash_attn_stream_k_fixup_general<(int)256, (int)16, (i REG:30 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:432 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 7  void flash_attn_stream_k_fixup_uniform<(int)256, (int)16, (i REG:39 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:428 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 8  void flash_attn_ext_f16<(int)256, (int)256, (int)16, (int)2, REG:242 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 9  void flash_attn_ext_f16<(int)256, (int)256, (int)16, (int)2, REG:242 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 10 void flash_attn_combine_results<(int)128>(const float *, con REG:64 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:380 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 11 void flash_attn_stream_k_fixup_general<(int)128, (int)16, (i REG:30 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:432 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 12 void flash_attn_stream_k_fixup_uniform<(int)128, (int)16, (i REG:39 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:428 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 13 void flash_attn_ext_f16<(int)128, (int)128, (int)16, (int)2, REG:207 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 14 void flash_attn_ext_f16<(int)128, (int)128, (int)16, (int)2, REG:211 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 15 void flash_attn_combine_results<(int)112>(const float *, con REG:39 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:380 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 16 void flash_attn_stream_k_fixup_general<(int)112, (int)16, (i REG:30 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:432 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 17 void flash_attn_stream_k_fixup_uniform<(int)112, (int)16, (i REG:36 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:428 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 18 void flash_attn_ext_f16<(int)112, (int)112, (int)16, (int)2, REG:24 STACK:40 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 19 void flash_attn_ext_f16<(int)112, (int)112, (int)16, (int)2, REG:197 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 20 void flash_attn_combine_results<(int)96>(const float *, cons REG:39 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:380 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 21 void flash_attn_stream_k_fixup_general<(int)96, (int)16, (in REG:30 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:432 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 22 void flash_attn_stream_k_fixup_uniform<(int)96, (int)16, (in REG:36 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:428 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 23 void flash_attn_ext_f16<(int)96, (int)96, (int)16, (int)2, ( REG:24 STACK:40 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 24 void flash_attn_ext_f16<(int)96, (int)96, (int)16, (int)2, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)
+    A: REG:193 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:196 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 25 void flash_attn_combine_results<(int)80>(const float *, cons REG:39 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:380 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 26 void flash_attn_stream_k_fixup_general<(int)80, (int)16, (in REG:32 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:432 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 27 void flash_attn_stream_k_fixup_uniform<(int)80, (int)16, (in REG:36 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:428 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 28 void flash_attn_ext_f16<(int)80, (int)80, (int)16, (int)2, ( REG:24 STACK:40 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 29 void flash_attn_ext_f16<(int)80, (int)80, (int)16, (int)2, ( REG:178 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 30 void flash_attn_combine_results<(int)64>(const float *, cons REG:64 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:380 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 31 void flash_attn_stream_k_fixup_general<(int)64, (int)16, (in REG:32 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:432 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 32 void flash_attn_stream_k_fixup_uniform<(int)64, (int)16, (in REG:39 STACK:0 SHARED:0 LOCAL:0 CONSTANT[0]:428 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 33 void flash_attn_mask_to_KV_max<(int)16>(const __half2 *, int REG:35 STACK:0 SHARED:128 LOCAL:0 CONSTANT[0]:392 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 34 void flash_attn_ext_f16<(int)64, (int)64, (int)16, (int)2, ( REG:24 STACK:40 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  res kernel 35 void flash_attn_ext_f16<(int)64, (int)64, (int)16, (int)2, ( REG:174 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  SASS-DIFF kernel 8 (5792 vs 5792 instructions)
+    A: void flash_attn_ext_f16<(int)256, (int)256, (int)16, (int)2, (ggml_type)1, (ggml_type)1, (bool)1, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)
+    B: void flash_attn_ext_f16<(int)256, (int)256, (int)16, (int)2, (bool)1, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)
+    --- A
+    +++ B
+    @@ -53,3 +53,3 @@
+     MOV R11, 0x360 ;
+    -CALL.REL.NOINC 0x16440 ;
+    +CALL.REL.NOINC 0x16430 ;
+     IMAD.MOV.U32 R174, RZ, RZ, R173 ;
+    @@ -82,3 +82,3 @@
+     MOV R11, 0x530 ;
+    -CALL.REL.NOINC 0x16440 ;
+    +CALL.REL.NOINC 0x16430 ;
+     BRA 0x660 ;
+    @@ -136,3 +136,3 @@
+     ISETP.LE.OR P0, PT, R173, R174, P0 ;
+    -@P0 BRA 0xe710 ;
+    +@P0 BRA 0xe700 ;
+     S2R R164, SR_TID.Y ;
+    @@ -280,2 +280,3 @@
+     IMAD.MOV.U32 R215, RZ, RZ, c[0x0][0x228] ;
+    +IMAD.MOV.U32 R144, RZ, RZ, R177 ;
+     IABS R2, R13 ;
+    @@ -325,27 +326,26 @@
+     IMAD.SHL.U32 R20, R20, 0x80, RZ ;
+    +IADD3 R32, P2, P3, R4, c[0x0][0x160], R33.reuse ;
+    +SHF.R.S32.HI R5, RZ, 0x1f, R33 ;
+    +SHF.R.S32.HI R4, RZ, 0x1f, R4 ;
+     SEL R22, R2, RZ, P1 ;
+     LEA.HI.X R2, R10, c[0x0][0x184], R9, 0x2, P4 ;
+    +IADD3.X R33, R4, c[0x0][0x164], R5, P2, P3 ;
+     SEL R21, R3, RZ, P1 ;
+     SEL R185, R185, RZ, P1 ;
+    -SEL R2, R2, RZ, P1 ;
+    +SEL R4, R2, RZ, P1 ;
+     ISETP.NE.AND P1, PT, R213, RZ, PT ;
+     SHF.R.S32.HI R7, RZ, 0x1f, R214 ;
+    -IADD3 R32, P2, P3, R4, c[0x0][0x160], R33.reuse ;
+    -SHF.R.S32.HI R5, RZ, 0x1f, R33 ;
+    -IMAD R7, R7, c[0x0][0x228], RZ ;
+    -SHF.R.S32.HI R4, RZ, 0x1f, R4 ;
+    -IMAD R7, R214, c[0x0][0x22c], R7 ;
+    ... (1983 more diff lines)
+  SASS-DIFF kernel 9 (5744 vs 5744 instructions)
+    A: void flash_attn_ext_f16<(int)256, (int)256, (int)16, (int)2, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)
+    B: void flash_attn_ext_f16<(int)256, (int)256, (int)16, (int)2, (bool)0, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)
+    --- A
+    +++ B
+    @@ -53,3 +53,3 @@
+     MOV R11, 0x360 ;
+    -CALL.REL.NOINC 0x16160 ;
+    +CALL.REL.NOINC 0x16150 ;
+     IMAD.MOV.U32 R174, RZ, RZ, R173 ;
+    @@ -82,3 +82,3 @@
+     MOV R11, 0x530 ;
+    -CALL.REL.NOINC 0x16160 ;
+    +CALL.REL.NOINC 0x16150 ;
+     BRA 0x660 ;
+    @@ -136,3 +136,3 @@
+     ISETP.LE.OR P0, PT, R173, R174, P0 ;
+    -@P0 BRA 0xe520 ;
+    +@P0 BRA 0xe510 ;
+     S2R R164, SR_TID.Y ;
+    @@ -280,2 +280,3 @@
+     IMAD.MOV.U32 R215, RZ, RZ, c[0x0][0x228] ;
+    +IMAD.MOV.U32 R140, RZ, RZ, R177 ;
+     IABS R2, R13 ;
+    @@ -325,27 +326,26 @@
+     IMAD.SHL.U32 R20, R20, 0x80, RZ ;
+    +IADD3 R32, P2, P3, R4, c[0x0][0x160], R33.reuse ;
+    +SHF.R.S32.HI R5, RZ, 0x1f, R33 ;
+    +SHF.R.S32.HI R4, RZ, 0x1f, R4 ;
+     SEL R22, R2, RZ, P1 ;
+     LEA.HI.X R2, R10, c[0x0][0x184], R9, 0x2, P4 ;
+    +IADD3.X R33, R4, c[0x0][0x164], R5, P2, P3 ;
+     SEL R21, R3, RZ, P1 ;
+     SEL R185, R185, RZ, P1 ;
+    -SEL R2, R2, RZ, P1 ;
+    +SEL R4, R2, RZ, P1 ;
+     ISETP.NE.AND P1, PT, R213, RZ, PT ;
+     SHF.R.S32.HI R7, RZ, 0x1f, R214 ;
+    -IADD3 R32, P2, P3, R4, c[0x0][0x160], R33.reuse ;
+    -SHF.R.S32.HI R5, RZ, 0x1f, R33 ;
+    -IMAD R7, R7, c[0x0][0x228], RZ ;
+    -SHF.R.S32.HI R4, RZ, 0x1f, R4 ;
+    -IMAD R7, R214, c[0x0][0x22c], R7 ;
+    ... (1986 more diff lines)
+  SASS-DIFF kernel 13 (5472 vs 5464 instructions)
+    A: void flash_attn_ext_f16<(int)128, (int)128, (int)16, (int)2, (ggml_type)1, (ggml_type)1, (bool)1, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)
+    B: void flash_attn_ext_f16<(int)128, (int)128, (int)16, (int)2, (bool)1, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)
+    --- A
+    +++ B
+    @@ -53,3 +53,3 @@
+     MOV R11, 0x360 ;
+    -CALL.REL.NOINC 0x15010 ;
+    +CALL.REL.NOINC 0x14fc0 ;
+     IMAD.MOV.U32 R21, RZ, RZ, R22 ;
+    @@ -82,3 +82,3 @@
+     MOV R11, 0x530 ;
+    -CALL.REL.NOINC 0x15010 ;
+    +CALL.REL.NOINC 0x14fc0 ;
+     BRA 0x660 ;
+    @@ -136,3 +136,3 @@
+     ISETP.LE.OR P0, PT, R22, R21, P0 ;
+    -@P0 BRA 0xda60 ;
+    +@P0 BRA 0xda10 ;
+     S2R R26, SR_TID.Y ;
+    @@ -274,6 +274,6 @@
+     ISETP.GE.AND P2, PT, R13, RZ, PT ;
+    -IMAD R48, R41, c[0x0][0x204], RZ ;
+    +IMAD R66, R41, c[0x0][0x204], RZ ;
+     I2F.RP R6, R7 ;
+     SHF.L.U32 R37, R37, 0x1, RZ ;
+    -IMAD R51, R13.reuse, c[0x0][0x1d8], RZ ;
+    +IMAD R49, R13.reuse, c[0x0][0x1d8], RZ ;
+     SHF.R.S32.HI R163, RZ, 0x1f, R162 ;
+    @@ -282,10 +282,11 @@
+     IMAD R41, R18, R41, R37 ;
+    -SHF.R.S32.HI R49, RZ, 0x1f, R48 ;
+    +SHF.R.S32.HI R67, RZ, 0x1f, R66 ;
+     IMAD.WIDE.U32 R162, R13, c[0x0][0x1f8], R162 ;
+     SHF.R.S32.HI R44, RZ, 0x1f, R41 ;
+    -IMAD.WIDE.U32 R48, R13, c[0x0][0x208], R48 ;
+    +IMAD.WIDE.U32 R66, R13, c[0x0][0x208], R66 ;
+     MUFU.RCP R6, R6 ;
+    -IADD3 R135, P3, R48, c[0x0][0x170], RZ ;
+    +IADD3 R135, P3, R66, c[0x0][0x170], RZ ;
+    +IMAD.MOV.U32 R64, RZ, RZ, R134 ;
+     IADD3 R4, R6, 0xffffffe, RZ ;
+    -SHF.R.S32.HI R6, RZ, 0x1f, R51 ;
+    ... (2405 more diff lines)
+  SASS-DIFF kernel 14 (5400 vs 5392 instructions)
+    A: void flash_attn_ext_f16<(int)128, (int)128, (int)16, (int)2, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)
+    B: void flash_attn_ext_f16<(int)128, (int)128, (int)16, (int)2, (bool)0, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)
+    --- A
+    +++ B
+    @@ -54,3 +54,3 @@
+     MOV R12, 0x370 ;
+    -CALL.REL.NOINC 0x14b70 ;
+    +CALL.REL.NOINC 0x14b00 ;
+     IMAD.MOV.U32 R121, RZ, RZ, R21 ;
+    @@ -83,3 +83,3 @@
+     MOV R12, 0x540 ;
+    -CALL.REL.NOINC 0x14b70 ;
+    +CALL.REL.NOINC 0x14b00 ;
+     BRA 0x670 ;
+    @@ -136,3 +136,3 @@
+     ISETP.LE.OR P0, PT, R21, R121, P0 ;
+    -@P0 BRA 0xd700 ;
+    +@P0 BRA 0xd690 ;
+     S2R R22, SR_TID.Y ;
+    @@ -274,6 +274,6 @@
+     ISETP.GE.AND P2, PT, R13, RZ, PT ;
+    -IMAD R40, R34, c[0x0][0x204], RZ ;
+    +IMAD R58, R34, c[0x0][0x204], RZ ;
+     I2F.RP R6, R8 ;
+     SHF.L.U32 R33, R33, 0x1, RZ ;
+    -IMAD R45, R13.reuse, c[0x0][0x1d8], RZ ;
+    +IMAD R43, R13.reuse, c[0x0][0x1d8], RZ ;
+     SHF.R.S32.HI R159, RZ, 0x1f, R158 ;
+    @@ -282,8 +282,9 @@
+     IMAD R34, R0, R34, R33 ;
+    -SHF.R.S32.HI R41, RZ, 0x1f, R40 ;
+    +SHF.R.S32.HI R59, RZ, 0x1f, R58 ;
+     IMAD.WIDE.U32 R158, R13, c[0x0][0x1f8], R158 ;
+     SHF.R.S32.HI R35, RZ, 0x1f, R34 ;
+    -IMAD.WIDE.U32 R40, R13, c[0x0][0x208], R40 ;
+    +IMAD.WIDE.U32 R58, R13, c[0x0][0x208], R58 ;
+     MUFU.RCP R6, R6 ;
+    -IADD3 R124, P3, R40, c[0x0][0x170], RZ ;
+    +IADD3 R125, P3, R58, c[0x0][0x170], RZ ;
+    +IMAD.MOV.U32 R56, RZ, RZ, R122 ;
+     IADD3 R4, R6, 0xffffffe, RZ ;
+    @@ -295,3 +296,3 @@
+    ... (3505 more diff lines)
+  note kernel 18 stub (NO_DEVICE_CODE): identical after masking source-location immediates
+  SASS-DIFF kernel 19 (5240 vs 5232 instructions)
+    A: void flash_attn_ext_f16<(int)112, (int)112, (int)16, (int)2, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)
+    B: void flash_attn_ext_f16<(int)112, (int)112, (int)16, (int)2, (bool)0, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)
+    --- A
+    +++ B
+    @@ -53,3 +53,3 @@
+     MOV R11, 0x360 ;
+    -CALL.REL.NOINC 0x14170 ;
+    +CALL.REL.NOINC 0x14150 ;
+     MOV R19, R20 ;
+    @@ -82,3 +82,3 @@
+     MOV R11, 0x530 ;
+    -CALL.REL.NOINC 0x14170 ;
+    +CALL.REL.NOINC 0x14150 ;
+     BRA 0x660 ;
+    @@ -130,8 +130,8 @@
+     ISETP.GT.AND P2, PT, R20, R19, PT ;
+    -SEL R169, R8, R3, !P1 ;
+    -IADD3 R3, R169, R20, -R19 ;
+    -ISETP.GT.AND P0, PT, R124.reuse, R3.reuse, PT ;
+    -IMNMX R138, R124, R3, PT ;
+    +SEL R166, R8, R3, !P1 ;
+    +IADD3 R141, R166, R20, -R19 ;
+    +ISETP.GT.AND P0, PT, R124.reuse, R141.reuse, PT ;
+    +IMNMX R141, R124, R141, PT ;
+     ISETP.LE.OR P0, PT, R20, R19, P0 ;
+    -@P0 BRA 0xd4b0 ;
+    +@P0 BRA 0xd480 ;
+     S2R R24, SR_TID.Y ;
+    @@ -194,7 +194,7 @@
+     @P0 IADD3 R2, R2, 0x1, RZ ;
+    -IMAD.MOV.U32 R9, RZ, RZ, R2.reuse ;
+    -@!P2 IMAD.MOV R9, RZ, RZ, -R2 ;
+    -@!P1 LOP3.LUT R9, RZ, R18, RZ, 0x33, !PT ;
+    +IMAD.MOV.U32 R11, RZ, RZ, R2.reuse ;
+    +@!P2 IMAD.MOV R11, RZ, RZ, -R2 ;
+    +@!P1 LOP3.LUT R11, RZ, R18, RZ, 0x33, !PT ;
+     IABS R5, R17 ;
+    -IMAD.MOV R2, RZ, RZ, -R9 ;
+    +IMAD.MOV R2, RZ, RZ, -R11 ;
+     IMAD.MOV R7, RZ, RZ, -R3 ;
+    @@ -255,3 +255,3 @@
+     IMAD.MOV R2, RZ, RZ, -R43 ;
+    ... (5959 more diff lines)
+  note kernel 23 stub (NO_DEVICE_CODE): identical after masking source-location immediates
+  SASS-DIFF kernel 24 (4544 vs 4544 instructions)
+    A: void flash_attn_ext_f16<(int)96, (int)96, (int)16, (int)2, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)
+    B: void flash_attn_ext_f16<(int)96, (int)96, (int)16, (int)2, (bool)0, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)
+    --- A
+    +++ B
+    @@ -37,8 +37,8 @@
+     @!P1 LOP3.LUT R14, RZ, c[0x0][0x1e4], RZ, 0x33, !PT ;
+    -SHF.R.S32.HI R132, RZ, 0x6, R3 ;
+    +SHF.R.S32.HI R134, RZ, 0x6, R3 ;
+     IADD3 R0, R14, 0x1, RZ ;
+    -IMAD R130, R132, UR5, RZ ;
+    +IMAD R132, R134, UR5, RZ ;
+     LEA.HI R0, R0, R0, RZ, 0x1 ;
+     SHF.R.S32.HI R15, RZ, 0x1, R0 ;
+    -IMAD R15, R15, R130, RZ ;
+    +IMAD R15, R15, R132, RZ ;
+     IMAD R16, R15, c[0x0][0x1e4], RZ ;
+    @@ -53,4 +53,4 @@
+     MOV R11, 0x360 ;
+    -CALL.REL.NOINC 0x115f0 ;
+    -IMAD.MOV.U32 R131, RZ, RZ, R128 ;
+    +CALL.REL.NOINC 0x11630 ;
+    +IMAD.MOV.U32 R131, RZ, RZ, R130 ;
+     BRA 0x4a0 ;
+    @@ -82,3 +82,3 @@
+     MOV R11, 0x530 ;
+    -CALL.REL.NOINC 0x115f0 ;
+    +CALL.REL.NOINC 0x11630 ;
+     BRA 0x660 ;
+    @@ -93,4 +93,4 @@
+     IMAD.HI.U32 R3, R5, R3, R4 ;
+    -IMAD.HI.U32 R128, R3, R2, RZ ;
+    -IMAD.MOV R3, RZ, RZ, -R128 ;
+    +IMAD.HI.U32 R130, R3, R2, RZ ;
+    +IMAD.MOV R3, RZ, RZ, -R130 ;
+     IMAD R2, R3, c[0x0][0xc], R2 ;
+    @@ -98,9 +98,9 @@
+     @P0 IADD3 R2, R2, -c[0x0][0xc], RZ ;
+    -@P0 IADD3 R128, R128, 0x1, RZ ;
+    +@P0 IADD3 R130, R130, 0x1, RZ ;
+     ISETP.GE.U32.AND P1, PT, R2, c[0x0][0xc], PT ;
+    -@P1 IADD3 R128, R128, 0x1, RZ ;
+    -@!P2 LOP3.LUT R128, RZ, c[0x0][0xc], RZ, 0x33, !PT ;
+    ... (4456 more diff lines)
+  note kernel 28 stub (NO_DEVICE_CODE): identical after masking source-location immediates
+  SASS-DIFF kernel 29 (4216 vs 4216 instructions)
+    A: void flash_attn_ext_f16<(int)80, (int)80, (int)16, (int)2, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)
+    B: void flash_attn_ext_f16<(int)80, (int)80, (int)16, (int)2, (bool)0, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)
+    --- A
+    +++ B
+    @@ -53,3 +53,3 @@
+     MOV R11, 0x360 ;
+    -CALL.REL.NOINC 0x10190 ;
+    +CALL.REL.NOINC 0x10170 ;
+     IMAD.MOV.U32 R126, RZ, RZ, R124 ;
+    @@ -82,3 +82,3 @@
+     MOV R11, 0x530 ;
+    -CALL.REL.NOINC 0x10190 ;
+    +CALL.REL.NOINC 0x10170 ;
+     BRA 0x660 ;
+    @@ -131,4 +131,4 @@
+     ISETP.GT.AND P2, PT, R124, R126, PT ;
+    -SEL R152, R6, R3, !P1 ;
+    -IADD3 R0, R152, R124, -R126 ;
+    +SEL R150, R6, R3, !P1 ;
+    +IADD3 R0, R150, R124, -R126 ;
+     ISETP.GT.AND P0, PT, R127.reuse, R0.reuse, PT ;
+    @@ -136,3 +136,3 @@
+     ISETP.LE.OR P0, PT, R124, R126, P0 ;
+    -@P0 BRA 0xa750 ;
+    +@P0 BRA 0xa730 ;
+     S2R R19, SR_TID.X ;
+    @@ -335,7 +335,8 @@
+     ISETP.GE.AND P2, PT, R51.reuse, RZ, PT ;
+    -IMAD R150, R48.reuse, c[0x0][0x1f0], RZ ;
+    +IMAD R60, R48.reuse, c[0x0][0x1f0], RZ ;
+     I2F.RP R6, R8 ;
+    -IMAD R56, R48, c[0x0][0x204], RZ ;
+    +IMAD R84, R48, c[0x0][0x204], RZ ;
+    +MOV R62, R127 ;
+     IMAD R48, R12, R48, R49 ;
+    -SHF.R.S32.HI R151, RZ, 0x1f, R150 ;
+    +SHF.R.S32.HI R61, RZ, 0x1f, R60 ;
+     IMAD R55, R51.reuse, c[0x0][0x1d8], RZ ;
+    @@ -343,7 +344,7 @@
+     IMAD.MOV.U32 R139, RZ, RZ, c[0x0][0x228] ;
+    -SHF.R.S32.HI R57, RZ, 0x1f, R56 ;
+    -IMAD.WIDE.U32 R150, R51, c[0x0][0x1f8], R150 ;
+    ... (4541 more diff lines)
+  note kernel 34 stub (NO_DEVICE_CODE): identical after masking source-location immediates
+  SASS-DIFF kernel 35 (3768 vs 3768 instructions)
+    A: void flash_attn_ext_f16<(int)64, (int)64, (int)16, (int)2, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)
+    B: void flash_attn_ext_f16<(int)64, (int)64, (int)16, (int)2, (bool)0, (bool)0>(const char *, const char *, const char *, const char *, const char *, const int *, float *, float2 *, float, float, float, float, unsigned int, float, int, uint3, int, int, int, int, int, int, int, int, int, int, int, long, int, int, long, int, int, int, int, int, long)
+    --- A
+    +++ B
+    @@ -53,3 +53,3 @@
+     MOV R15, 0x360 ;
+    -CALL.REL.NOINC 0xe5c0 ;
+    +CALL.REL.NOINC 0xe5a0 ;
+     IMAD.MOV.U32 R140, RZ, RZ, R138 ;
+    @@ -82,3 +82,3 @@
+     MOV R15, 0x530 ;
+    -CALL.REL.NOINC 0xe5c0 ;
+    +CALL.REL.NOINC 0xe5a0 ;
+     BRA 0x660 ;
+    @@ -135,8 +135,8 @@
+     ISETP.GT.AND P2, PT, R138, R140, PT ;
+    -SEL R150, R6, R3, !P1 ;
+    -IADD3 R40, R150, R138, -R140 ;
+    -ISETP.GT.AND P0, PT, R143.reuse, R40.reuse, PT ;
+    -IMNMX R40, R143, R40, PT ;
+    +SEL R151, R6, R3, !P1 ;
+    +IADD3 R112, R151, R138, -R140 ;
+    +ISETP.GT.AND P0, PT, R143.reuse, R112.reuse, PT ;
+    +IMNMX R112, R143, R112, PT ;
+     ISETP.LE.OR P0, PT, R138, R140, P0 ;
+    -@P0 BRA 0x9220 ;
+    +@P0 BRA 0x9200 ;
+     S2R R17, SR_TID.X ;
+    @@ -409,13 +409,14 @@
+     I2F.RP R6, R8 ;
+    -IMAD R60, R50, c[0x0][0x204], RZ ;
+    +IMAD R58, R50, c[0x0][0x204], RZ ;
+    +MOV R62, R143 ;
+     IMAD R50, R10, R50, R51 ;
+     SHF.R.S32.HI R57, RZ, 0x1f, R56 ;
+    -IMAD R59, R55.reuse, c[0x0][0x1d8], RZ ;
+    +IMAD R61, R55.reuse, c[0x0][0x1d8], RZ ;
+     IABS R3, R55 ;
+     IMAD.MOV.U32 R149, RZ, RZ, c[0x0][0x228] ;
+    -SHF.R.S32.HI R61, RZ, 0x1f, R60 ;
+    +SHF.R.S32.HI R59, RZ, 0x1f, R58 ;
+     IMAD.WIDE.U32 R56, R55, c[0x0][0x1f8], R56 ;
+    ... (3102 more diff lines)

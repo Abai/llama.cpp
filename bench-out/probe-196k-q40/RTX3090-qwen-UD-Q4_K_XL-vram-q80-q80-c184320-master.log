@@ -1,0 +1,8 @@
+0.01.601.593 I srv    load_model: loading model '/home/abai/Projects/abai/online/models/unsloth/Qwen3.6-27B-MTP-GGUF/Qwen3.6-27B-UD-Q4_K_XL.gguf'
+0.01.849.147 I load_tensors: loading model tensors, this can take a while... (load_mode = none)
+0.01.869.662 I llama_kv_cache:      CUDA0 KV buffer size =     0.00 MiB
+0.01.882.005 I sched_reserve:      CUDA0 compute buffer size =   980.28 MiB
+0.02.151.207 I load_tensors: loading model tensors, this can take a while... (load_mode = mmap)
+0.07.572.144 I llama_kv_cache:      CUDA0 KV buffer size =  6120.00 MiB
+0.07.630.915 I sched_reserve:      CUDA0 compute buffer size =   980.28 MiB
+0.07.656.038 E CUDA error: out of memory

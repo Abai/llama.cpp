@@ -1,0 +1,7 @@
+f16a-sm86-e62030ebe-vs-36b101543 exit 0 (165 s): RESULT: all instance objects instruction-identical
+f16b-sm86-e62030ebe-vs-36b101543 exit 0 (31 s): RESULT: all instance objects instruction-identical
+f16a-sm75-e62030ebe-vs-36b101543 exit 0 (119 s): RESULT: all instance objects instruction-identical
+f16b-sm75-e62030ebe-vs-36b101543 exit 0 (18 s): RESULT: all instance objects instruction-identical
+f16a-sm120-e62030ebe-vs-36b101543 exit 0 (116 s): RESULT: all instance objects instruction-identical
+f16b-sm120-e62030ebe-vs-36b101543 exit 0 (19 s): RESULT: all instance objects instruction-identical
+ALL DONE

@@ -1,0 +1,83 @@
+diff --git a/ggml/src/ggml-cuda/fattn-mma-f16.cuh b/ggml/src/ggml-cuda/fattn-mma-f16.cuh
+index 2c6213dae..afcc69da0 100644
+--- a/ggml/src/ggml-cuda/fattn-mma-f16.cuh
++++ b/ggml/src/ggml-cuda/fattn-mma-f16.cuh
+@@ -558,8 +558,8 @@ template<int DKQ, int DV, int ncols1, int ncols2, int nwarps, ggml_type type_K,
+     typename T_A_KQ, typename T_B_KQ, typename T_C_KQ, typename T_A_VKQ, typename T_B_VKQ, typename T_C_VKQ>
+ static __device__ __forceinline__ void flash_attn_ext_f16_iter(
+         const float2 * const __restrict__ Q_f2,
+-        const void   * const __restrict__ K_h2,
+-        const void   * const __restrict__ V_h2,
++        fattn_mma_kv_ptr_t<type_K> const __restrict__ K_h2,
++        fattn_mma_kv_ptr_t<type_V> const __restrict__ V_h2,
+         const half   * const __restrict__ mask_h,
+         float2       * const __restrict__ dstk,
+         float2       * const __restrict__ dstk_fixup,
+@@ -1203,8 +1203,8 @@ template<int DKQ, int DV, int ncols1, int ncols2, int nwarps, ggml_type type_K,
+     bool use_logit_softcap, bool V_is_K_view, bool needs_fixup, bool is_fixup>
+ static __device__ __forceinline__ void flash_attn_ext_f16_process_tile(
+         const float2 * const __restrict__ Q_f2,
+-        const void   * const __restrict__ K_h2,
+-        const void   * const __restrict__ V_h2,
++        fattn_mma_kv_ptr_t<type_K> const __restrict__ K_h2,
++        fattn_mma_kv_ptr_t<type_V> const __restrict__ V_h2,
+         const half   * const __restrict__ mask_h,
+         const float  * const __restrict__ sinks_f,
+         float2       * const __restrict__ dstk,
+@@ -1966,6 +1966,9 @@ static __global__ void flash_attn_ext_f16(
+ 
+     const int stride_V = V_is_K_view ? stride_K : nb21 / fattn_mma_kv_granule(type_V);
+ 
++    using kv_ptr_K = fattn_mma_kv_ptr_t<type_K>;
++    using kv_ptr_V = fattn_mma_kv_ptr_t<type_V>;
++
+     const int iter_k     = (ne11      + (nbatch_fa - 1)) / nbatch_fa;
+     const int iter_j     = (ne01.z    + (ncols1    - 1)) / ncols1;
+     const int iter_z_gqa = (gqa_ratio + (ncols2    - 1)) / ncols2;
+@@ -1992,12 +1995,12 @@ static __global__ void flash_attn_ext_f16(
+         const int zt_Q = z_KV*gqa_ratio + zt_gqa*ncols2; // Global Q head start index.
+ 
+         const float2 * Q_f2   = (const float2 *) (Q + nb03*sequence + nb02*zt_Q);
+-        const void   * K_h2   = (const void   *) (K + nb13*sequence + nb12*z_KV);
++        const kv_ptr_K K_h2   = (kv_ptr_K) (K + nb13*sequence + nb12*z_KV);
+         const half   * mask_h = ncols2 == 1 && !mask ? nullptr :
+             (const half *) (mask + nb33*(sequence % ne33));
+         float2       * dstk   = ((float2 *) dst) + (sequence*ne01.z*ne02 + zt_Q) * (DV/2);
+ 
+-        const void  * V_h2 = V_is_K_view ? K_h2 : (const void  *) (V + nb23*sequence + nb22*z_KV);
++        const kv_ptr_V V_h2 = V_is_K_view ? (kv_ptr_V) K_h2 : (kv_ptr_V) (V + nb23*sequence + nb22*z_KV);
+         const float * sinks_f = sinks ? (const float *) sinks + zt_Q : nullptr;
+ 
+         const float slope = ncols2 == 1 ? get_alibi_slope(max_bias, zt_Q, n_head_log2, m0, m1) : 1.0f;
+@@ -2038,12 +2041,12 @@ static __global__ void flash_attn_ext_f16(
+     const int zt_Q = z_KV*gqa_ratio + zt_gqa*ncols2; // Global Q head start index.
+ 
+     const float2 * Q_f2   = (const float2 *) (Q + nb03*sequence + nb02*zt_Q);
+-    const void   * K_h2   = (const void   *) (K + nb13*sequence + nb12*z_KV);
++    const kv_ptr_K K_h2   = (kv_ptr_K) (K + nb13*sequence + nb12*z_KV);
+     const half   * mask_h = ncols2 == 1 && !mask ? nullptr :
+         (const half *) (mask + nb33*(sequence % ne33));
+     float2       * dstk   = ((float2 *) dst) + (sequence*ne01.z*ne02 + zt_Q) * (DV/2);
+ 
+-    const void  * V_h2 = V_is_K_view ? K_h2 : (const void  *) (V + nb23*sequence + nb22*z_KV);
++    const kv_ptr_V V_h2 = V_is_K_view ? (kv_ptr_V) K_h2 : (kv_ptr_V) (V + nb23*sequence + nb22*z_KV);
+     const float * sinks_f = sinks ? (const float *) sinks + zt_Q : nullptr;
+ 
+     const float slope = ncols2 == 1 ? get_alibi_slope(max_bias, zt_Q, n_head_log2, m0, m1) : 1.0f;
+diff --git a/ggml/src/ggml-cuda/fattn-mma-load.cuh b/ggml/src/ggml-cuda/fattn-mma-load.cuh
+index 3cc36e578..11dcd5e7d 100644
+--- a/ggml/src/ggml-cuda/fattn-mma-load.cuh
++++ b/ggml/src/ggml-cuda/fattn-mma-load.cuh
+@@ -27,6 +27,12 @@ static constexpr __host__ __device__ size_t fattn_mma_kv_granule(ggml_type type)
+     }
+ }
+ 
++// Type of the K/V data pointers passed through the kernel: half2 for f16 data as in the kernel
++// without fused dequantization (with an untyped pointer the compiler generates different code for
++// the f16 kernels), raw bytes for quantized data.
++template <ggml_type type>
++using fattn_mma_kv_ptr_t = std::conditional_t<type == GGML_TYPE_F16, const half2 *, const void *>;
++
+ // Copies data from global to shared memory, ca == cache all levels.
+ // Both the src and dst pointers must be aligned to 8 bytes.
+ // Quantized KV rows are not 16-byte aligned (block_q8_0 is 34 bytes), 8 bytes is their max. alignment.

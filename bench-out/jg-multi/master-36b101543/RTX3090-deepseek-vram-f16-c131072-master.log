@@ -1,0 +1,21 @@
+# [filtered by filter-vram-logs.sh: allocation-relevant lines only]
+0.00.122.784 I srv    load_model: loading model '/home/abai/Projects/abai/online/models/converted/DeepSeek-V2-Lite-Q4_0.gguf'
+0.00.230.054 I load_tensors:        CUDA0 model buffer size =     0.00 MiB
+0.00.230.956 I llama_context: n_ctx                 = 131072
+0.00.230.956 I llama_context: n_ctx_seq             = 131072
+0.00.230.956 I llama_context: n_batch               = 2048
+0.00.230.956 I llama_context: n_ubatch              = 512
+0.00.230.957 I llama_context: flash_attn            = enabled
+0.00.230.959 I llama_context: n_ctx_seq (131072) < n_ctx_train (163840) -- the full capacity of the model will not be utilized
+0.00.234.660 I llama_kv_cache:      CUDA0 KV buffer size =     0.00 MiB
+0.00.238.506 I sched_reserve:      CUDA0 compute buffer size =   204.13 MiB
+0.00.437.113 I load_tensors:        CUDA0 model buffer size =  8376.28 MiB
+0.01.216.000 I llama_context: n_ctx                 = 131072
+0.01.216.000 I llama_context: n_ctx_seq             = 131072
+0.01.216.000 I llama_context: n_batch               = 2048
+0.01.216.000 I llama_context: n_ubatch              = 512
+0.01.216.001 I llama_context: flash_attn            = enabled
+0.01.216.003 I llama_context: n_ctx_seq (131072) < n_ctx_train (163840) -- the full capacity of the model will not be utilized
+0.01.219.966 I llama_kv_cache:      CUDA0 KV buffer size =  3888.00 MiB
+0.01.257.593 I sched_reserve:      CUDA0 compute buffer size =   204.13 MiB
+0.01.298.955 I srv  llama_server: listening on http://127.0.0.1:8080

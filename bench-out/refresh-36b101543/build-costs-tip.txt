@@ -1,0 +1,6 @@
+build costs at an earlier feature revision vs master 36b101543 (2026-09-01)
+clean, isolated (sole workload), ggml-cuda target only, sm86, ccache OFF, -j24
+master AQ=OFF: wall 117 s, libggml-cuda.so 58 MB (rc=0)
+master AQ=ON: wall 152 s, libggml-cuda.so 76 MB (rc=0)
+branch AQ=OFF: wall 174 s, libggml-cuda.so 72 MB (rc=0)
+branch AQ=ON: wall 232 s, libggml-cuda.so 97 MB (rc=0)

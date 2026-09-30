@@ -1,0 +1,2 @@
+        SW Thermal Slowdown                            : 0 us
+        HW Thermal Slowdown                            : 0 us

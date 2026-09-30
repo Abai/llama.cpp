@@ -1,0 +1,8 @@
+0.01.583.752 I srv    load_model: loading model '/home/abai/Projects/abai/online/models/unsloth/Qwen3.6-27B-MTP-GGUF/Qwen3.6-27B-Q4_0.gguf'
+0.01.840.170 I load_tensors: loading model tensors, this can take a while... (load_mode = none)
+0.01.861.300 I llama_kv_cache:      CUDA0 KV buffer size =     0.00 MiB
+0.01.873.531 I sched_reserve:      CUDA0 compute buffer size =   362.28 MiB
+0.02.139.474 I load_tensors: loading model tensors, this can take a while... (load_mode = mmap)
+0.12.053.140 I llama_kv_cache:      CUDA0 KV buffer size =  8160.00 MiB
+0.12.137.162 I sched_reserve:      CUDA0 compute buffer size =   362.28 MiB
+0.12.253.370 I srv  llama_server: listening on http://127.0.0.1:8080

@@ -1,0 +1,21 @@
+# [filtered by filter-vram-logs.sh: allocation-relevant lines only]
+0.00.126.036 I srv    load_model: loading model '/home/abai/Projects/abai/online/models/converted/gemma-2b-Q4_0.gguf'
+0.00.317.605 I load_tensors:        CUDA0 model buffer size =     0.00 MiB
+0.00.318.445 I llama_context: n_ctx                 = 32768
+0.00.318.445 I llama_context: n_ctx_seq             = 32768
+0.00.318.445 I llama_context: n_batch               = 2048
+0.00.318.446 I llama_context: n_ubatch              = 512
+0.00.318.446 I llama_context: flash_attn            = enabled
+0.00.318.449 W llama_context: n_ctx_seq (32768) > n_ctx_train (8192) -- possible training context overflow
+0.00.321.604 I llama_kv_cache:      CUDA0 KV buffer size =     0.00 MiB
+0.00.323.924 I sched_reserve:      CUDA0 compute buffer size =   140.01 MiB
+0.00.539.671 I load_tensors:        CUDA0 model buffer size =  1473.57 MiB
+0.00.691.920 I llama_context: n_ctx                 = 32768
+0.00.691.920 I llama_context: n_ctx_seq             = 32768
+0.00.691.921 I llama_context: n_batch               = 2048
+0.00.691.921 I llama_context: n_ubatch              = 512
+0.00.691.921 I llama_context: flash_attn            = enabled
+0.00.691.925 W llama_context: n_ctx_seq (32768) > n_ctx_train (8192) -- possible training context overflow
+0.00.695.465 I llama_kv_cache:      CUDA0 KV buffer size =   576.00 MiB
+0.00.708.530 I sched_reserve:      CUDA0 compute buffer size =   140.01 MiB
+0.00.738.898 I srv  llama_server: listening on http://127.0.0.1:8080

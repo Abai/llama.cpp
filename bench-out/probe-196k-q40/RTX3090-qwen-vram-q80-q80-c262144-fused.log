@@ -1,0 +1,10 @@
+0.01.595.780 I srv    load_model: loading model '/home/abai/Projects/abai/online/models/unsloth/Qwen3.6-27B-MTP-GGUF/Qwen3.6-27B-Q4_0.gguf'
+0.01.850.343 I load_tensors: loading model tensors, this can take a while... (load_mode = none)
+0.01.872.331 I llama_kv_cache:      CUDA0 KV buffer size =     0.00 MiB
+0.01.884.720 I sched_reserve:      CUDA0 compute buffer size =   378.28 MiB
+0.02.152.714 I load_tensors: loading model tensors, this can take a while... (load_mode = mmap)
+0.07.208.086 I llama_kv_cache:      CUDA0 KV buffer size =  8704.00 MiB
+0.07.229.242 E ggml_backend_cuda_buffer_type_alloc_buffer: allocating 378.28 MiB on device 0: cudaMalloc failed: out of memory
+0.07.229.244 E ggml_gallocr_reserve_n_impl: failed to allocate CUDA0 buffer of size 396656896
+0.07.229.245 E graph_reserve: failed to allocate compute buffers
+0.07.234.280 E llama_init_from_model: failed to initialize the context: failed to allocate compute pp buffers

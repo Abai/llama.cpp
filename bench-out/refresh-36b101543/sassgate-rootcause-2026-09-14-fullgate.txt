@@ -1,0 +1,287 @@
+[master ncols1_*-ncols2_?] 16 objects
+[master ncols1_*-ncols2_??] 5 objects
+[feat ncols1_*-ncols2_?] 16 objects
+[feat ncols1_*-ncols2_??] 5 objects
+[fix ncols1_*-ncols2_?] 16 objects
+[fix ncols1_*-ncols2_??] 5 objects
+[feat ncols1_16-ncols2_2-q*] 3 objects
+[fix ncols1_16-ncols2_2-q*] 3 objects
+compile done in 214 s
+##### GATE feat vs master glob ncols1_*-ncols2_?
+comparing 16 instance object(s): sassprobe-build-feat vs sassprobe-build-master
+  RES-DIFF kernel 16 void flash_attn_ext_f16<(int)128, (int)128, (int)1, (int)8, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:178 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:180 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 21 void flash_attn_ext_f16<(int)112, (int)112, (int)1, (int)8, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:172 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:174 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 26 void flash_attn_ext_f16<(int)96, (int)96, (int)1, (int)8, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:146 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:148 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 37 void flash_attn_ext_f16<(int)64, (int)64, (int)1, (int)8, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:130 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:134 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  SASS-DIFF kernel 1 (6728 vs 6720 instructions)
+  SASS-DIFF kernel 10 (5656 vs 5656 instructions)
+  SASS-DIFF kernel 11 (5640 vs 5632 instructions)
+  SASS-DIFF kernel 15 (4624 vs 4600 instructions)
+  SASS-DIFF kernel 16 (4568 vs 4544 instructions)
+  SASS-DIFF kernel 21 (4784 vs 4776 instructions)
+  SASS-DIFF kernel 26 (4176 vs 4160 instructions)
+  SASS-DIFF kernel 31 (3976 vs 3968 instructions)
+  SASS-DIFF kernel 37 (3712 vs 3704 instructions)
+FAIL fattn-mma-f16-instance-ncols1_1-ncols2_8
+PASS fattn-mma-f16-instance-ncols1_16-ncols2_1
+  RES-DIFF kernel 24 void flash_attn_ext_f16<(int)96, (int)96, (int)16, (int)2, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:193 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:196 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  SASS-DIFF kernel 8 (5792 vs 5792 instructions)
+  SASS-DIFF kernel 9 (5744 vs 5744 instructions)
+  SASS-DIFF kernel 13 (5472 vs 5464 instructions)
+  SASS-DIFF kernel 14 (5400 vs 5392 instructions)
+  SASS-DIFF kernel 19 (5240 vs 5232 instructions)
+  SASS-DIFF kernel 24 (4544 vs 4544 instructions)
+  SASS-DIFF kernel 29 (4216 vs 4216 instructions)
+  SASS-DIFF kernel 35 (3768 vs 3768 instructions)
+FAIL fattn-mma-f16-instance-ncols1_16-ncols2_2
+  RES-DIFF kernel 21 void flash_attn_ext_f16<(int)112, (int)112, (int)16, (int)4, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:205 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:207 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 26 void flash_attn_ext_f16<(int)96, (int)96, (int)16, (int)4, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:188 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:187 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 37 void flash_attn_ext_f16<(int)64, (int)64, (int)16, (int)4, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:211 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:192 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  SASS-DIFF kernel 10 (6848 vs 6840 instructions)
+  SASS-DIFF kernel 11 (6752 vs 6752 instructions)
+  SASS-DIFF kernel 15 (7896 vs 7888 instructions)
+  SASS-DIFF kernel 16 (7736 vs 7728 instructions)
+  SASS-DIFF kernel 21 (7016 vs 7016 instructions)
+  SASS-DIFF kernel 26 (6200 vs 6200 instructions)
+  SASS-DIFF kernel 31 (5992 vs 5984 instructions)
+  SASS-DIFF kernel 37 (5464 vs 5464 instructions)
+FAIL fattn-mma-f16-instance-ncols1_16-ncols2_4
+  RES-DIFF kernel 15 void flash_attn_ext_f16<(int)128, (int)128, (int)2, (int)4, (ggml_type)1, (ggml_type)1, (bool)1, (bool)0>
+    A: REG:178 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:179 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 21 void flash_attn_ext_f16<(int)112, (int)112, (int)2, (int)4, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:172 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:174 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 26 void flash_attn_ext_f16<(int)96, (int)96, (int)2, (int)4, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:146 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:148 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 37 void flash_attn_ext_f16<(int)64, (int)64, (int)2, (int)4, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:133 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:135 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  SASS-DIFF kernel 10 (5704 vs 5696 instructions)
+  SASS-DIFF kernel 11 (5680 vs 5672 instructions)
+  SASS-DIFF kernel 15 (4640 vs 4632 instructions)
+  SASS-DIFF kernel 16 (4600 vs 4584 instructions)
+  SASS-DIFF kernel 21 (4832 vs 4816 instructions)
+  SASS-DIFF kernel 26 (4216 vs 4200 instructions)
+  SASS-DIFF kernel 31 (4008 vs 4000 instructions)
+  SASS-DIFF kernel 37 (3752 vs 3736 instructions)
+FAIL fattn-mma-f16-instance-ncols1_2-ncols2_4
+  RES-DIFF kernel 11 void flash_attn_ext_f16<(int)256, (int)256, (int)2, (int)8, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:243 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:245 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 15 void flash_attn_ext_f16<(int)128, (int)128, (int)2, (int)8, (ggml_type)1, (ggml_type)1, (bool)1, (bool)0>
+    A: REG:163 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:164 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 16 void flash_attn_ext_f16<(int)128, (int)128, (int)2, (int)8, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:163 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:164 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  SASS-DIFF kernel 1 (5488 vs 5480 instructions)
+  SASS-DIFF kernel 10 (6080 vs 6056 instructions)
+  SASS-DIFF kernel 11 (6032 vs 6016 instructions)
+  SASS-DIFF kernel 15 (4184 vs 4176 instructions)
+  SASS-DIFF kernel 16 (4136 vs 4128 instructions)
+  SASS-DIFF kernel 21 (4528 vs 4520 instructions)
+  SASS-DIFF kernel 26 (3912 vs 3904 instructions)
+  SASS-DIFF kernel 31 (3592 vs 3584 instructions)
+  SASS-DIFF kernel 37 (3240 vs 3232 instructions)
+FAIL fattn-mma-f16-instance-ncols1_2-ncols2_8
+PASS fattn-mma-f16-instance-ncols1_32-ncols2_1
+  RES-DIFF kernel 13 void flash_attn_ext_f16<(int)128, (int)128, (int)32, (int)2, (ggml_type)1, (ggml_type)1, (bool)1, (bool)0>
+    A: REG:229 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:227 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 19 void flash_attn_ext_f16<(int)112, (int)112, (int)32, (int)2, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:209 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:208 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  SASS-DIFF kernel 8 (6808 vs 6808 instructions)
+  SASS-DIFF kernel 9 (6712 vs 6712 instructions)
+  SASS-DIFF kernel 13 (7936 vs 7936 instructions)
+  SASS-DIFF kernel 14 (7792 vs 7792 instructions)
+  SASS-DIFF kernel 19 (7064 vs 7056 instructions)
+  SASS-DIFF kernel 24 (6264 vs 6264 instructions)
+  SASS-DIFF kernel 29 (6024 vs 6024 instructions)
+  SASS-DIFF kernel 35 (5544 vs 5544 instructions)
+FAIL fattn-mma-f16-instance-ncols1_32-ncols2_2
+  RES-DIFF kernel 13 void flash_attn_ext_f16<(int)128, (int)128, (int)4, (int)2, (ggml_type)1, (ggml_type)1, (bool)1, (bool)0>
+    A: REG:177 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:178 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 14 void flash_attn_ext_f16<(int)128, (int)128, (int)4, (int)2, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:180 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:182 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 19 void flash_attn_ext_f16<(int)112, (int)112, (int)4, (int)2, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:168 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:170 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 24 void flash_attn_ext_f16<(int)96, (int)96, (int)4, (int)2, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:142 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:144 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 35 void flash_attn_ext_f16<(int)64, (int)64, (int)4, (int)2, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:134 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:136 STACK:16 SHARED:0 LOCAL:0 CONSTANT[2]:8 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  SASS-DIFF kernel 8 (5680 vs 5680 instructions)
+  SASS-DIFF kernel 9 (5656 vs 5656 instructions)
+  SASS-DIFF kernel 13 (4616 vs 4600 instructions)
+  SASS-DIFF kernel 14 (4560 vs 4552 instructions)
+  SASS-DIFF kernel 19 (4816 vs 4808 instructions)
+  SASS-DIFF kernel 24 (4200 vs 4192 instructions)
+  SASS-DIFF kernel 29 (3992 vs 3984 instructions)
+  SASS-DIFF kernel 35 (3720 vs 3712 instructions)
+FAIL fattn-mma-f16-instance-ncols1_4-ncols2_2
+  RES-DIFF kernel 11 void flash_attn_ext_f16<(int)256, (int)256, (int)4, (int)4, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:243 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:245 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 15 void flash_attn_ext_f16<(int)128, (int)128, (int)4, (int)4, (ggml_type)1, (ggml_type)1, (bool)1, (bool)0>
+    A: REG:163 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:164 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 16 void flash_attn_ext_f16<(int)128, (int)128, (int)4, (int)4, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:163 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:164 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  SASS-DIFF kernel 10 (6080 vs 6056 instructions)
+  SASS-DIFF kernel 11 (6032 vs 6016 instructions)
+  SASS-DIFF kernel 15 (4184 vs 4176 instructions)
+  SASS-DIFF kernel 16 (4136 vs 4128 instructions)
+  SASS-DIFF kernel 21 (4520 vs 4520 instructions)
+  SASS-DIFF kernel 26 (3912 vs 3904 instructions)
+  SASS-DIFF kernel 31 (3592 vs 3584 instructions)
+  SASS-DIFF kernel 37 (3240 vs 3232 instructions)
+FAIL fattn-mma-f16-instance-ncols1_4-ncols2_4
+  RES-DIFF kernel 15 void flash_attn_ext_f16<(int)128, (int)128, (int)4, (int)8, (ggml_type)1, (ggml_type)1, (bool)1, (bool)0>
+    A: REG:194 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:192 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 16 void flash_attn_ext_f16<(int)128, (int)128, (int)4, (int)8, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:195 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:194 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 21 void flash_attn_ext_f16<(int)112, (int)112, (int)4, (int)8, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:185 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:186 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  SASS-DIFF kernel 1 (4720 vs 4712 instructions)
+  SASS-DIFF kernel 10 (5800 vs 5800 instructions)
+  SASS-DIFF kernel 11 (5752 vs 5752 instructions)
+  SASS-DIFF kernel 15 (5832 vs 5816 instructions)
+  SASS-DIFF kernel 16 (5744 vs 5720 instructions)
+  SASS-DIFF kernel 21 (5472 vs 5472 instructions)
+  SASS-DIFF kernel 26 (4840 vs 4840 instructions)
+  SASS-DIFF kernel 31 (4448 vs 4440 instructions)
+  SASS-DIFF kernel 37 (3976 vs 3968 instructions)
+FAIL fattn-mma-f16-instance-ncols1_4-ncols2_8
+PASS fattn-mma-f16-instance-ncols1_64-ncols2_1
+PASS fattn-mma-f16-instance-ncols1_8-ncols2_1
+  RES-DIFF kernel 9 void flash_attn_ext_f16<(int)256, (int)256, (int)8, (int)2, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:243 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:245 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 13 void flash_attn_ext_f16<(int)128, (int)128, (int)8, (int)2, (ggml_type)1, (ggml_type)1, (bool)1, (bool)0>
+    A: REG:163 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:164 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 14 void flash_attn_ext_f16<(int)128, (int)128, (int)8, (int)2, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:163 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:164 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  SASS-DIFF kernel 8 (6072 vs 6048 instructions)
+  SASS-DIFF kernel 9 (6024 vs 6008 instructions)
+  SASS-DIFF kernel 13 (4176 vs 4168 instructions)
+  SASS-DIFF kernel 14 (4128 vs 4120 instructions)
+  SASS-DIFF kernel 19 (4512 vs 4504 instructions)
+  SASS-DIFF kernel 24 (3904 vs 3896 instructions)
+  SASS-DIFF kernel 29 (3584 vs 3576 instructions)
+  SASS-DIFF kernel 35 (3232 vs 3224 instructions)
+FAIL fattn-mma-f16-instance-ncols1_8-ncols2_2
+  RES-DIFF kernel 15 void flash_attn_ext_f16<(int)128, (int)128, (int)8, (int)4, (ggml_type)1, (ggml_type)1, (bool)1, (bool)0>
+    A: REG:194 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:192 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 16 void flash_attn_ext_f16<(int)128, (int)128, (int)8, (int)4, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:195 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:194 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 21 void flash_attn_ext_f16<(int)112, (int)112, (int)8, (int)4, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:185 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:186 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  SASS-DIFF kernel 10 (5800 vs 5800 instructions)
+  SASS-DIFF kernel 11 (5752 vs 5752 instructions)
+  SASS-DIFF kernel 15 (5832 vs 5816 instructions)
+  SASS-DIFF kernel 16 (5744 vs 5720 instructions)
+  SASS-DIFF kernel 21 (5472 vs 5472 instructions)
+  SASS-DIFF kernel 26 (4840 vs 4840 instructions)
+  SASS-DIFF kernel 31 (4448 vs 4440 instructions)
+  SASS-DIFF kernel 37 (3976 vs 3968 instructions)
+FAIL fattn-mma-f16-instance-ncols1_8-ncols2_4
+  RES-DIFF kernel 1 void flash_attn_ext_f16<(int)192, (int)128, (int)8, (int)8, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:211 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:213 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 15 void flash_attn_ext_f16<(int)128, (int)128, (int)8, (int)8, (ggml_type)1, (ggml_type)1, (bool)1, (bool)0>
+    A: REG:214 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:215 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  RES-DIFF kernel 31 void flash_attn_ext_f16<(int)80, (int)80, (int)8, (int)8, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:164 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:166 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  SASS-DIFF kernel 1 (5744 vs 5736 instructions)
+  SASS-DIFF kernel 10 (6848 vs 6840 instructions)
+  SASS-DIFF kernel 11 (6752 vs 6752 instructions)
+  SASS-DIFF kernel 15 (8016 vs 8016 instructions)
+  SASS-DIFF kernel 16 (7832 vs 7840 instructions)
+  SASS-DIFF kernel 21 (7080 vs 7072 instructions)
+  SASS-DIFF kernel 26 (6264 vs 6264 instructions)
+  SASS-DIFF kernel 31 (6088 vs 6088 instructions)
+  SASS-DIFF kernel 37 (5584 vs 5584 instructions)
+FAIL fattn-mma-f16-instance-ncols1_8-ncols2_8
+RESULT: SASS DIVERGENCE DETECTED
+##### GATE feat vs master glob ncols1_*-ncols2_??
+comparing 5 instance object(s): sassprobe-build-feat vs sassprobe-build-master
+  SASS-DIFF kernel 4 (5440 vs 5432 instructions)
+FAIL fattn-mma-f16-instance-ncols1_1-ncols2_16
+PASS fattn-mma-f16-instance-ncols1_1-ncols2_32
+  SASS-DIFF kernel 4 (4712 vs 4704 instructions)
+FAIL fattn-mma-f16-instance-ncols1_2-ncols2_16
+PASS fattn-mma-f16-instance-ncols1_2-ncols2_32
+  RES-DIFF kernel 4 void flash_attn_ext_f16<(int)192, (int)128, (int)4, (int)16, (ggml_type)1, (ggml_type)1, (bool)0, (bool)0>
+    A: REG:211 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+    B: REG:213 STACK:16 SHARED:0 LOCAL:0 CONSTANT[0]:560 TEXTURE:0 SURFACE:0 SAMPLER:0
+  SASS-DIFF kernel 4 (5744 vs 5736 instructions)
+FAIL fattn-mma-f16-instance-ncols1_4-ncols2_16
+RESULT: SASS DIVERGENCE DETECTED
+##### GATE fix vs master glob ncols1_*-ncols2_?
+comparing 16 instance object(s): sassprobe-build-fix vs sassprobe-build-master
+PASS fattn-mma-f16-instance-ncols1_1-ncols2_8
+PASS fattn-mma-f16-instance-ncols1_16-ncols2_1
+PASS fattn-mma-f16-instance-ncols1_16-ncols2_2
+PASS fattn-mma-f16-instance-ncols1_16-ncols2_4
+PASS fattn-mma-f16-instance-ncols1_2-ncols2_4
+PASS fattn-mma-f16-instance-ncols1_2-ncols2_8
+PASS fattn-mma-f16-instance-ncols1_32-ncols2_1
+PASS fattn-mma-f16-instance-ncols1_32-ncols2_2
+PASS fattn-mma-f16-instance-ncols1_4-ncols2_2
+PASS fattn-mma-f16-instance-ncols1_4-ncols2_4
+PASS fattn-mma-f16-instance-ncols1_4-ncols2_8
+PASS fattn-mma-f16-instance-ncols1_64-ncols2_1
+PASS fattn-mma-f16-instance-ncols1_8-ncols2_1
+PASS fattn-mma-f16-instance-ncols1_8-ncols2_2
+PASS fattn-mma-f16-instance-ncols1_8-ncols2_4
+PASS fattn-mma-f16-instance-ncols1_8-ncols2_8
+RESULT: all instance objects instruction-identical
+##### GATE fix vs master glob ncols1_*-ncols2_??
+comparing 5 instance object(s): sassprobe-build-fix vs sassprobe-build-master
+PASS fattn-mma-f16-instance-ncols1_1-ncols2_16
+PASS fattn-mma-f16-instance-ncols1_1-ncols2_32
+PASS fattn-mma-f16-instance-ncols1_2-ncols2_16
+PASS fattn-mma-f16-instance-ncols1_2-ncols2_32
+PASS fattn-mma-f16-instance-ncols1_4-ncols2_16
+RESULT: all instance objects instruction-identical
+##### GATE fix vs feat quantized probe instances
+comparing 3 instance object(s): sassprobe-build-fix vs sassprobe-build-feat
+PASS fattn-mma-f16-instance-ncols1_16-ncols2_2-q4_0-q4_0
+PASS fattn-mma-f16-instance-ncols1_16-ncols2_2-q8_0-q4_0
+PASS fattn-mma-f16-instance-ncols1_16-ncols2_2-q8_0-q8_0
+RESULT: all instance objects instruction-identical
+fullgate done in 338 s

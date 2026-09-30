@@ -1,0 +1,15 @@
+f16a-sm86-c18fac264-vs-36b101543 exit 0 (114 s): RESULT: all instance objects instruction-identical
+f16b-sm86-c18fac264-vs-36b101543 exit 0 (17 s): RESULT: all instance objects instruction-identical
+f16a-sm120-c18fac264-vs-36b101543 exit 1 (114 s): RESULT: SASS DIVERGENCE DETECTED
+f16b-sm120-c18fac264-vs-36b101543 exit 1 (18 s): RESULT: SASS DIVERGENCE DETECTED
+f16a-sm75-c18fac264-vs-36b101543 exit 0 (109 s): RESULT: all instance objects instruction-identical
+f16b-sm75-c18fac264-vs-36b101543 exit 0 (19 s): RESULT: all instance objects instruction-identical
+f16a-sm70-c18fac264-vs-36b101543 exit 1 (137 s): RESULT: SASS DIVERGENCE DETECTED
+f16b-sm70-c18fac264-vs-36b101543 exit 0 (21 s): RESULT: all instance objects instruction-identical
+quant-q8q8-sm86-ff8cc2867-vs-c18fac264 exit 0 (144 s): RESULT: all instance objects instruction-identical
+quant-q4q4-sm86-ff8cc2867-vs-c18fac264 exit 0 (152 s): RESULT: all instance objects instruction-identical
+quant-q8q4-sm86-ff8cc2867-vs-c18fac264 exit 0 (149 s): RESULT: all instance objects instruction-identical
+ALL DONE
+f16a-sm120-c18fac264-vs-36b101543 exit 0 (122 s): RESULT: all instance objects instruction-identical [helper masks fp16 stub immediates]
+f16b-sm120-c18fac264-vs-36b101543 exit 0 (26 s): RESULT: all instance objects instruction-identical [helper masks fp16 stub immediates]
+SM120 RERUN DONE
