@@ -1,0 +1,21 @@
+# [filtered by filter-vram-logs.sh: allocation-relevant lines only]
+0.00.128.393 I srv    load_model: loading model '/home/abai/Projects/abai/online/models/unsloth/Llama-3.1-8B-Instruct-GGUF/Llama-3.1-8B-Instruct-Q4_0.gguf'
+0.00.305.649 I load_tensors:        CUDA0 model buffer size =     0.00 MiB
+0.00.307.399 I llama_context: n_ctx                 = 16384
+0.00.307.399 I llama_context: n_ctx_seq             = 16384
+0.00.307.399 I llama_context: n_batch               = 2048
+0.00.307.399 I llama_context: n_ubatch              = 512
+0.00.307.400 I llama_context: flash_attn            = enabled
+0.00.307.402 I llama_context: n_ctx_seq (16384) < n_ctx_train (131072) -- the full capacity of the model will not be utilized
+0.00.310.064 I llama_kv_cache:      CUDA0 KV buffer size =     0.00 MiB
+0.00.313.222 I sched_reserve:      CUDA0 compute buffer size =   124.09 MiB
+0.00.549.006 I load_tensors:        CUDA0 model buffer size =  4169.99 MiB
+0.00.966.713 I llama_context: n_ctx                 = 16384
+0.00.966.713 I llama_context: n_ctx_seq             = 16384
+0.00.966.713 I llama_context: n_batch               = 2048
+0.00.966.713 I llama_context: n_ubatch              = 512
+0.00.966.714 I llama_context: flash_attn            = enabled
+0.00.966.717 I llama_context: n_ctx_seq (16384) < n_ctx_train (131072) -- the full capacity of the model will not be utilized
+0.00.969.483 I llama_kv_cache:      CUDA0 KV buffer size =  1088.00 MiB
+0.00.983.346 I sched_reserve:      CUDA0 compute buffer size =   124.09 MiB
+0.01.026.141 I srv  llama_server: listening on http://127.0.0.1:8080

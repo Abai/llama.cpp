@@ -1,0 +1,86 @@
+fattn-mma-f16-instance-ncols1_1-ncols2_16.cu.o             main kernels vs master:   2 identical, 4 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_1-ncols2_32.cu.o             main kernels vs master:   2 identical, 4 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_1-ncols2_8.cu.o              main kernels vs master:  11 identical, 16 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_16-ncols2_1.cu.o             main kernels vs master:   8 identical, 12 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_16-ncols2_2.cu.o             main kernels vs master:  10 identical, 14 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_16-ncols2_4.cu.o             main kernels vs master:  11 identical, 16 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_2-ncols2_16.cu.o             main kernels vs master:   2 identical, 4 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_2-ncols2_32.cu.o             main kernels vs master:   2 identical, 4 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_2-ncols2_4.cu.o              main kernels vs master:  11 identical, 16 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_2-ncols2_8.cu.o              main kernels vs master:  11 identical, 16 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_32-ncols2_1.cu.o             main kernels vs master:   8 identical, 12 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_32-ncols2_2.cu.o             main kernels vs master:  10 identical, 14 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_4-ncols2_16.cu.o             main kernels vs master:   2 identical, 4 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_4-ncols2_2.cu.o              main kernels vs master:  10 identical, 14 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_4-ncols2_4.cu.o              main kernels vs master:  11 identical, 16 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_4-ncols2_8.cu.o              main kernels vs master:  11 identical, 16 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_64-ncols2_1.cu.o             main kernels vs master:   8 identical, 12 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_8-ncols2_1.cu.o              main kernels vs master:   8 identical, 12 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_8-ncols2_2.cu.o              main kernels vs master:  10 identical, 14 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_8-ncols2_4.cu.o              main kernels vs master:  11 identical, 16 write_partial=true variants (not compared)
+fattn-mma-f16-instance-ncols1_8-ncols2_8.cu.o              main kernels vs master:  11 identical, 16 write_partial=true variants (not compared)
+fattn-tile-instance-dkq112-dv112.cu.o                      main kernels vs master:  34 identical
+fattn-tile-instance-dkq128-dv128.cu.o                      main kernels vs master:  34 identical
+fattn-tile-instance-dkq192-dv128.cu.o                      main kernels vs master:  10 identical
+fattn-tile-instance-dkq256-dv256.cu.o                      main kernels vs master:  34 identical
+fattn-tile-instance-dkq320-dv256.cu.o                      main kernels vs master:   2 identical
+fattn-tile-instance-dkq40-dv40.cu.o                        main kernels vs master:  34 identical
+fattn-tile-instance-dkq512-dv512.cu.o                      main kernels vs master:  18 identical
+fattn-tile-instance-dkq576-dv512.cu.o                      main kernels vs master:   8 identical
+fattn-tile-instance-dkq64-dv64.cu.o                        main kernels vs master:  34 identical
+fattn-tile-instance-dkq72-dv72.cu.o                        main kernels vs master:  34 identical
+fattn-tile-instance-dkq80-dv80.cu.o                        main kernels vs master:  34 identical
+fattn-tile-instance-dkq96-dv96.cu.o                        main kernels vs master:  34 identical
+fattn-vec-instance-bf16-bf16.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-bf16-f16.cu.o                           main kernels vs master:  12 identical
+fattn-vec-instance-bf16-q4_0.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-bf16-q4_1.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-bf16-q5_0.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-bf16-q5_1.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-bf16-q8_0.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-f16-bf16.cu.o                           main kernels vs master:  12 identical
+fattn-vec-instance-f16-f16.cu.o                            main kernels vs master:  12 identical
+fattn-vec-instance-f16-q4_0.cu.o                           main kernels vs master:  12 identical
+fattn-vec-instance-f16-q4_1.cu.o                           main kernels vs master:  12 identical
+fattn-vec-instance-f16-q5_0.cu.o                           main kernels vs master:  12 identical
+fattn-vec-instance-f16-q5_1.cu.o                           main kernels vs master:  12 identical
+fattn-vec-instance-f16-q8_0.cu.o                           main kernels vs master:  12 identical
+fattn-vec-instance-q4_0-bf16.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q4_0-f16.cu.o                           main kernels vs master:  12 identical
+fattn-vec-instance-q4_0-q4_0.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q4_0-q4_1.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q4_0-q5_0.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q4_0-q5_1.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q4_0-q8_0.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q4_1-bf16.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q4_1-f16.cu.o                           main kernels vs master:  12 identical
+fattn-vec-instance-q4_1-q4_0.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q4_1-q4_1.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q4_1-q5_0.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q4_1-q5_1.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q4_1-q8_0.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q5_0-bf16.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q5_0-f16.cu.o                           main kernels vs master:  12 identical
+fattn-vec-instance-q5_0-q4_0.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q5_0-q4_1.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q5_0-q5_0.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q5_0-q5_1.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q5_0-q8_0.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q5_1-bf16.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q5_1-f16.cu.o                           main kernels vs master:  12 identical
+fattn-vec-instance-q5_1-q4_0.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q5_1-q4_1.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q5_1-q5_0.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q5_1-q5_1.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q5_1-q8_0.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q8_0-bf16.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q8_0-f16.cu.o                           main kernels vs master:  12 identical
+fattn-vec-instance-q8_0-q4_0.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q8_0-q4_1.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q8_0-q5_0.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q8_0-q5_1.cu.o                          main kernels vs master:  12 identical
+fattn-vec-instance-q8_0-q8_0.cu.o                          main kernels vs master:  12 identical
+
+TOTAL main FA kernels: identical=1068  stub-identical(masked __LINE__)=82  DIFF=0  MISSING=0
+helper kernels differing from master (fixup/combine, expected): 0
+GATE: PASS

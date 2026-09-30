@@ -1,0 +1,19 @@
+test-backend-ops validation: feature/cuda-fattn-convert-buffer-cap (54b94d245) vs master (36b101543), 2026-10-01
+GPU: NVIDIA GeForce RTX 3090 (sm_86, 24 GB, driver 580.173.02); image llamacpp-bench-dev:12.8.1-gcc14; cmake: -DGGML_CUDA=ON -DCMAKE_CUDA_ARCHITECTURES=86 -DCMAKE_BUILD_TYPE=Release -DGGML_CUDA_FA_ALL_QUANTS=ON
+commands: <side>/bin/test-backend-ops test -o FLASH_ATTN_EXT -b CUDA0 | test -b CUDA0 |
+          compute-sanitizer --tool memcheck --error-exitcode 42 <branch>/bin/test-backend-ops test -o FLASH_ATTN_EXT -b CUDA0
+          branch additionally with GGML_CUDA_FATTN_CONVERT_BYTES=1048576 / =262144 (multi-chunk conversion)
+
+fa-master:                                     3955/3955 tests passed
+    2/2 backends passed
+fa-branch:                                     3969/3969 tests passed
+    2/2 backends passed
+fa-branch-cap1MiB:                             3969/3969 tests passed
+    2/2 backends passed
+fa-branch-cap256KiB:                           3969/3969 tests passed
+    2/2 backends passed
+full-master:                                   15630/15630 tests passed
+    2/2 backends passed
+full-branch:                                   15644/15644 tests passed
+    2/2 backends passed
+sanitizer memcheck FLASH_ATTN_EXT (branch):    ERROR SUMMARY: 0 errors (exit 0)
